@@ -1,0 +1,85 @@
+{
+  "mit": {
+    "spdx": "mit",
+    "name": "MIT",
+    "legalEntity": "Microsoft",
+    "recommended": true
+  },
+  "contoso": {
+    "spdx": "mit",
+    "name": "Contoso MIT",
+    "legalEntity": "Contoso",
+    "environments": ["dev", "localhost"]
+  },
+  "official-sample-microsoft": {
+    "spdx": "mit",
+    "name": "Official Sample",
+    "legalEntity": "Microsoft",
+    "forceForReleaseType": "sample code",
+    "webhook": "__sampleswebhookurl__",
+    "webhookEvents": ["push"],
+    "webhookFriendlyName": "docs.microsoft.com/samples",
+    "webhookSharedSecret": "__sampleskeyvaultpath__",
+    "environments": ["prod"],
+    "collaborators": {
+      "push": [
+        {
+          "username": "__samplescollaboratorusername__",
+          "acceptInvitationToken": "",
+          "contact": "__samplescontact__"
+        }
+      ]
+    }
+  },
+  "official-sample-dnf": {
+    "spdx": "mit",
+    "name": "Official Sample",
+    "legalEntity": ".NET Foundation",
+    "forceForReleaseType": "sample code",
+    "webhook": "__sampleswebhookurl__",
+    "webhookEvents": ["push"],
+    "webhookFriendlyName": "docs.microsoft.com/samples",
+    "webhookSharedSecret": "__sampleskeyvaultpath__",
+    "environments": ["prod"],
+    "collaborators": {
+      "push": [
+        {
+          "username": "__samplescollaboratorusername__",
+          "acceptInvitationToken": "",
+          "contact": "__samplescontact__"
+        }
+      ]
+    }
+  },
+  "microsoft.docs": {
+    "name": "MIT and Creative Commons Attribution 4.0",
+    "description": "Official microsoft.docs repo",
+    "legalEntity": "Microsoft",
+    "spdx": "(mit and cc-by-4.0)"
+  },
+  "dnfmit": {
+    "spdx": "mit",
+    "name": "MIT",
+    "legalEntity": ".NET Foundation"
+  },
+  "dnfmit.docs": {
+    "spdx": "(mit and cc-by-4.0)",
+    "name": "MIT and Creative Commons Attribution 4.0",
+    "description": "Docs repo",
+    "legalEntity": ".NET Foundation"
+  },
+  "issueonly": {
+    "spdx": "cc-by-4.0",
+    "name": "Creative Commons Attribution 4.0",
+    "description": "Issue-only repository (no code)",
+    "legalEntity": "Microsoft"
+  },
+  "azure-samples": {
+    "spdx": "mit",
+    "name": "MIT",
+    "legalEntity": "Microsoft"
+  },
+  "other": {
+    "name": "Other"
+  }
+}

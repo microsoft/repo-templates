@@ -1,0 +1,15 @@
+{
+  "_": "for historical purposes, some of the templates did not include some of the common files. maybe we should determine why.",
+  "contoso": [
+    "code_of_conduct.md",
+    "security.md"
+  ],
+  "azure-samples": [
+    "license",
+    "code_of_conduct.md",
+    "security.md"
+  ],
+  "dnfmit.docs": [
+    "security.md"
+  ]
+}
