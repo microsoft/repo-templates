@@ -2,7 +2,12 @@
   "name": "@microsoft/repos-templates",
   "private": true,
   "author": "Microsoft",
-  "version": "2.0.__buildid__",
+  "version": "2.0.__Build_BuildNumber__",
+  "continuousDeployment": {
+    "buildId": "__Build_BuildId__",
+    "buildNumber": "__Build_BuildNumber__",
+    "commitId": "__Build_SourceVersion__"
+  },
   "license": "mit",
   "dependencies": {},
   "files": [
