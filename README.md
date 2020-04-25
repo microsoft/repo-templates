@@ -1,3 +1,33 @@
+# @microsoft/repo-templates
+
+> Microsoft's default repo templates
+
+# What is this?
+
+These files are packaged as the default, standard recommended content for net new
+GitHub repos created by Microsoft teams across all official Microsoft GitHub orgs such
+as `microsoft`, `MicrosoftDocs`, `Azure`, etc.
+
+This is not a GitHub repo template, however, since we have a number of different
+orgs. Previous to 2020, this content was partially mirrored in the `microsoft.github.io` repo.
+
+When Microsoft teams create new repos, either through internal tooling, or on GitHub directly,
+these files are applied as sane defaults and help to encourage community.
+
+Please help build the future of Microsoft open communities by making thoughtful contributions here.
+
+These projects should be technology-agnostic.
+
+## Structure of directories
+
+### `shared` directory
+
+The common directory contains defaults that all templates use unless overridden.
+
+### `projections` directory
+
+These are more specific templates for projects such as Microsoft official samples or
+.NET Foundation projects.
 
 # Contributing
 
