@@ -1,5 +1,5 @@
 {
-  "name": "@microsoft/repos-templates",
+  "name": "__companyinternalpackagename__",
   "private": true,
   "author": "Microsoft",
   "version": "2.0.__Build_BuildId__",

@@ -5,7 +5,7 @@
 
 // This is basically a cheap Makefile. In JavaScript. Because...
 
-const { readdir, stat, mkdir, copyFile, unlink, rmdir } = require('fs').promises;
+const { readdir, stat, mkdir, copyFile, unlink, rmdir, writeFile } = require('fs').promises;
 const path = require('path');
 
 const templateSpecificExclusions = require('../projections/common-excludes.json');
@@ -19,6 +19,9 @@ function logWithFooter(msg) {
   console.log('='.repeat(msg.length));
 }
 
+const appPackage = require('../package.json');
+const publishingPackage = path.resolve('__dirname', '..' ,'publishing-package.json');
+
 async function build() {
   if (await exists(templatesPath)) {
     console.log(`Cleaning up existing templates from ${templatesPath}`);
@@ -27,6 +30,12 @@ async function build() {
     console.log();
   }
   await mkdir(templatesPath);
+
+  // Create a packaging version
+  appPackage.private = false;
+  console.log(`Writing ${publishingPackage}`);
+  await writeFile(publishingPackage, JSON.stringify(appPackage, null, 2));
+  console.log();
 
   const sharedFiles = await allFiles(sharedPath);
 

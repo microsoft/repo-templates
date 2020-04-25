@@ -6,3 +6,4 @@ templates/
 
 # Internal-only info
 PRIVATENOTES.txt
+publishing-package.json
