@@ -39,6 +39,8 @@ async function build() {
     await tryBuildTemplate(projectionsPath, templateName, sharedFiles);
   }
 
+  const definitionsFile = 'definitions.json';
+  await copyTo(`- ${definitionsFile}`, path.join(projectionsPath, definitionsFile), path.join(templatesPath, definitionsFile));
 }
 
 async function tryBuildTemplate(projectionsPath, templateName, sharedFiles) {
