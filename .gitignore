@@ -7,3 +7,6 @@ templates/
 # Internal-only info
 PRIVATENOTES.txt
 publishing-package.json
+
+# Excluding other files
+.DS_Store
