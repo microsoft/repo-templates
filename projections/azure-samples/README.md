@@ -32,7 +32,7 @@ This project framework provides the following features:
 (Add steps to get up and running quickly)
 
 1. git clone [repository clone url]
-2. cd [respository name]
+2. cd [repository name]
 3. ...
 
 
