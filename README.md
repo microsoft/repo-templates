@@ -42,7 +42,7 @@ Contoso is the Microsoft entity used for "fake demo companies, etc.". The Contos
 Microsoft's open source engineering system for validating the template system, but never used by actual
 product teams.
 
-### dntmit.docs
+### dnfmit.docs
 
 Repos that consist primarily of documentation content that are intended for .NET Foundation projects
 use this template. The template consists of a `LICENSE` covering docs, a `LICENSE-CODE` file covering
