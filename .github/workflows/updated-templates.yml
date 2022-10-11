@@ -1,0 +1,20 @@
+name: Publish updated templates to Microsoft systems
+
+on:
+  push:
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify internal systems to use updated templates
+        env:
+          INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME: ${{ secrets.INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME }}
+          PAT: ${{ secrets.REPO_TEMPLATES_OSS_WORKFLOW_DISPATCH }}
+        run: |
+          curl -X POST https://api.github.com/repos/$INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.PAT }} \
+          --data '{"event_type": "update", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
