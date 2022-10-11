@@ -12,7 +12,7 @@ jobs:
       - name: Notify internal systems to use updated templates
         run: |
           curl -H "Accept: application/vnd.github.everest-preview+json" \
-            -H "Authorization: token ${REPO_TEMPLATES_OSS_WORKFLOW_DISPATCH}" \
+            -H "Authorization: token ${{ secrets.REPO_TEMPLATES_OSS_WORKFLOW_DISPATCH }}" \
             --request POST \
-            --data '{"event_type": "rebuild-microsoft-oss-templates", "repository": "$GITHUB_REPOSITORY"}' \
+            --data '{"event_type": "rebuild-microsoft-oss-templates", "client_payload": {"repository":"$GITHUB_REPOSITORY"}}' \
             https://api.github.com/repos/${{ secrets.INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME }}/dispatches
