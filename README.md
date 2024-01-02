@@ -61,7 +61,7 @@ feedback, but not host or store code.
 
 ### microsoft.docs
 
-Default template for docs-related repos that are used by the <https://learn.microsoft.com> site.
+Default template for docs-related repos that are used by the [Microsoft Learn](https://learn.microsoft.com) site.
 
 ### mit
 
@@ -70,7 +70,7 @@ basics such as a `SECURITY.MD` file.
 
 ### official-sample-dnf
 
-Official samples that are indexed at <https://learn.microsoft.com/samples> and also are copyright-assigned
+Official samples that are indexed at Microsoft Learn's [code samples](https://learn.microsoft.com/samples) and also are copyright-assigned
 to the .NET Foundation use this template.
 
 The `README.md` file has a rich metadata header with required fields and information that is processed
@@ -81,7 +81,7 @@ connects with a sample publishing system.
 
 ### official-sample-microsoft
 
-Official samples that are indexed at <https://learn.microsoft.com/samples>.
+Official samples that are indexed at Microsoft Learn's [code samples](https://learn.microsoft.com/samples).
 
 The `README.md` file has a rich metadata header with required fields and information that is processed
 by the docs site. The template outlines some of the files that are placed.
@@ -132,7 +132,7 @@ with how to react and manage projects with too much initial content.
 
 Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit <https://cla.opensource.microsoft.com>.
+the rights to use your contribution. For details, visit [Contributor License Agreements](https://cla.opensource.microsoft.com).
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
