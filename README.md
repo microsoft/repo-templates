@@ -6,7 +6,7 @@ The **official, default** template at Microsoft is the one called **mit**.  If y
 files in the `shared/` folder with the files in `projections/mit`, you get the standard, default
 set of files that new GitHub repos are placed with in the company.
 
-# What is this?
+## What is this?
 
 These files are packaged as the default, standard recommended content for net new
 GitHub repos created by Microsoft teams across all official Microsoft GitHub orgs such
@@ -61,7 +61,7 @@ feedback, but not host or store code.
 
 ### microsoft.docs
 
-Default template for docs-related repos that are used by the https://docs.microsoft.com site.
+Default template for docs-related repos that are used by the <https://learn.microsoft.com> site.
 
 ### mit
 
@@ -70,7 +70,7 @@ basics such as a `SECURITY.MD` file.
 
 ### official-sample-dnf
 
-Official samples that are indexed at https://docs.microsoft.com/samples and also are copyright-assigned 
+Official samples that are indexed at <https://learn.microsoft.com/samples> and also are copyright-assigned
 to the .NET Foundation use this template.
 
 The `README.md` file has a rich metadata header with required fields and information that is processed
@@ -81,7 +81,7 @@ connects with a sample publishing system.
 
 ### official-sample-microsoft
 
-Official samples that are indexed at https://docs.microsoft.com/samples.
+Official samples that are indexed at <https://learn.microsoft.com/samples>.
 
 The `README.md` file has a rich metadata header with required fields and information that is processed
 by the docs site. The template outlines some of the files that are placed.
@@ -107,7 +107,7 @@ These are more specific templates for projects such as Microsoft official sample
 
 ## Output of the union of the directories
 
-```
+```text
 // psuedo-code
 for (each templateName of projections) {
   copy(sharedFiles, excludingAnySpecialExclusions);
@@ -115,11 +115,11 @@ for (each templateName of projections) {
 }
 ```
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.
 
-## Pull request review
+### Pull request review
 
 Pull requests to this repo will be reviewed, at a minimum, by the Open Source Programs Office at
 Microsoft, as well as a set of Microsoft's "Open Source Champs", for guidance.
@@ -128,7 +128,7 @@ Please understand that these templates often need to be kept rather simple, sinc
 they are a starting point, and if there is too much guidance, teams may not be familiar
 with how to react and manage projects with too much initial content.
 
-## Contribution requirements
+### Contribution requirements
 
 Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
