@@ -11,11 +11,11 @@ urlFragment: "update-this-to-unique-url-stub"
 # Official Microsoft Sample
 
 <!-- 
-Guidelines on README format: https://review.docs.microsoft.com/help/onboard/admin/samples/concepts/readme-template?branch=master
+Guidelines on README format: https://review.learn.microsoft.com/help/contribute/samples/concepts/readme-template?branch=main
 
-Guidance on onboarding samples to docs.microsoft.com/samples: https://review.docs.microsoft.com/help/onboard/admin/samples/process/onboarding?branch=master
+Guidance on onboarding samples to learn.microsoft.com/samples: https://review.learn.microsoft.com/help/contribute/samples/process/onboarding?branch=main
 
-Taxonomies for products and languages: https://review.docs.microsoft.com/new-hope/information-architecture/metadata/taxonomies?branch=master
+Taxonomies for products and languages: https://review.learn.microsoft.com/help/platform/metadata-taxonomies?branch=main
 -->
 
 Give a short description for your sample here. What does it do and why is it important?
@@ -53,7 +53,7 @@ Provide users with more context on the tools and services used in the sample. Ex
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+the rights to use your contribution. For details, visit [Contributor License Agreements](https://cla.opensource.microsoft.com).
 
 When you submit a pull request, a CLA bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
