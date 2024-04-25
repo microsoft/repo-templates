@@ -6,4 +6,5 @@ Resources:
 
 - [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/)
 - [Microsoft Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/)
-- Contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with questions or concerns
+- Refer to the CONTRIBUTING.md or README.md of this project for reporting process
+- Employees can reach out at [aka.ms/opensource/coc-support](https://aka.ms/opensource/coc-support)
