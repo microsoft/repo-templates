@@ -2,7 +2,6 @@ name: Publish updated templates to Microsoft systems
 
 on:
   push:
-  repository_dispatch:
   workflow_dispatch:
 
 jobs:
@@ -13,7 +12,7 @@ jobs:
         id: app-token
         with:
           owner: ${{ secrets.OSPO_TARGET_ORG }}
-          repositories: action-receiver
+          repositories: ${{ secrets.OSPO_TARGET_REPO }}
           app-id: ${{ vars.OSPO_GITHUB_DISPATCHER_APP_ID }}
           private-key: ${{ secrets.OSPO_GITHUB_DISPATCHER_APP_PEM }}
 
