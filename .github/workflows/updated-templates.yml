@@ -22,7 +22,7 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
             https://api.github.com/repos/${{ secrets.INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME }}/dispatches \
-            --data '{"event_type": "rebuild-microsoft-oss-templates", "client_payload": {"repository":"microsoft/repo-templates"}}'
+            --data '{"event_type": "rebuild-microsoft-oss-templates", "client_payload": {"repository":"microsoft/repo-templates"}}')
           if [[ "$response" -lt 200 || "$response" -ge 300 ]]; then
             echo "Error: Received HTTP status code $response"
             exit 1
