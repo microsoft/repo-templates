@@ -2,17 +2,30 @@ name: Publish updated templates to Microsoft systems
 
 on:
   push:
-  repository_dispatch:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify internal systems to use updated templates
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          owner: ${{ secrets.OSPO_TARGET_ORG }}
+          repositories: ${{ secrets.OSPO_TARGET_REPO }}
+          app-id: ${{ vars.OSPO_GITHUB_DISPATCHER_APP_ID }}
+          private-key: ${{ secrets.OSPO_GITHUB_DISPATCHER_APP_PEM }}
+
+      - name: Notify system of new repo templates to build internally
         run: |
-          curl -H "Accept: application/vnd.github.everest-preview+json" \
-            -H "Authorization: token ${{ secrets.REPO_TEMPLATES_OSS_WORKFLOW_DISPATCH }}" \
-            --request POST \
-            --data '{"event_type": "rebuild-microsoft-oss-templates", "client_payload": {"repository":"microsoft/repo-templates"}}' \
-            https://api.github.com/repos/${{ secrets.INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME }}/dispatches
+          response=$(curl -w "%{http_code}" -o /dev/null -s -X POST \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
+            https://api.github.com/repos/${{ secrets.INTERNAL_EMU_OSSMGMT_REPOSITORY_NAME }}/dispatches \
+            --data '{"event_type": "rebuild-microsoft-oss-templates", "client_payload": {"repository":"microsoft/repo-templates"}}')
+          if [[ "$response" -lt 200 || "$response" -ge 300 ]]; then
+            echo "Error: Received HTTP status code $response"
+            exit 1
+          fi
