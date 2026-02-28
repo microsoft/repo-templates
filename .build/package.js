@@ -3,7 +3,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 //
 
-// This is basically a cheap Makefile. In JavaScript. Because...
+// This is basically a cheap Makefile. In JavaScript. Because---
 
 const { readdir, stat, mkdir, copyFile, unlink, rmdir, writeFile } = require('fs').promises;
 const path = require('path');
